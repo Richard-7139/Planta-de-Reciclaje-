@@ -33,7 +33,7 @@ public class Proveedor {
     public NombreProveedor getNombre() { return nombre; }
     public DocumentoIdentidad getDocumento() { return documento; }
     public Contacto getContacto() { return contacto; }
-    public CorreoElectronico getCorreo() { return correo; }
+    public Correo getCorreo() { return correo; }
     public Frecuencia getFrecuencia() { return frecuencia; }
-    public Set<MaterialId> getMaterialesSuministrados() { return materialesSuministrados; }
+    public Set<idMaterial> getMaterialesSuministrados() { return materialesSuministrados; }
 }
