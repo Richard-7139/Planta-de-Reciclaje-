@@ -2,6 +2,7 @@ package co.edu.udec.planta_reciclaje.domain.model;
 
 import co.edu.udec.planta_reciclaje.domain.valueobjects.*;
 import co.edu.udec.planta_reciclaje.domain.enums.*;
+import co.edu.udec.planta_reciclaje.domain.exceptions.Exception;
 import java.util.Set;
 
 public class Proveedor {
