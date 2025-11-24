@@ -81,4 +81,5 @@
       </plugin>
     </plugins>
   </build>
+    <name>planta-reciclaje</name>
 </project>

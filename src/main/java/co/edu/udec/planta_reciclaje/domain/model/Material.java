@@ -13,17 +13,34 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-public class Material {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+@Entity (name = "Materiales")
+public class Material implements java.io.Serializable {
+    @Id
+    @Column (name = "ID", length = 36, nullable = false)
     private final idMaterial id; //Identidad única
     
     //Atributos
+    @Column (length = 100, nullable = false)
     private String nombreMaterial;
+    @Column (length = 100, nullable = false)
     private clasificacionMaterial clasificacion;
+    @Column (length = 50, nullable = false)
     private unidadMedida unidadMedida;
+    @Column (length = 20, nullable = false)
     private Precio precioUnidad;
+    @Column (length = 20, nullable = false)
     private tiempoEstimado tiempo;
+    @Column (length = 20, nullable = false)
     private final List<EtapaProceso> etapa = new ArrayList<>();
+    @Column (length = 20, nullable = false)
     private int indiceEtapaActual = -1;
+    
+
     
     public Material(idMaterial id,  String nombreMaterial, clasificacionMaterial clasificacion, unidadMedida unidadMedida, Precio precioUnidad, tiempoEstimado tiempo) {
         if (id == null) throw new Exception("Id requerido");
